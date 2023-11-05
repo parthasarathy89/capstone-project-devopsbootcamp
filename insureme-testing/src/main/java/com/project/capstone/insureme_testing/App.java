@@ -16,7 +16,7 @@ public class App
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
     	chromeOptions.addArguments("--headless");
-        chromeOptions.binary="/usr/bin/google-chrome"
+        chromeOptions.binary("/usr/bin/google-chrome");
     	
     	WebDriver webDriver = new ChromeDriver(chromeOptions);
     	System.out.println("Starting Test case Execution");
