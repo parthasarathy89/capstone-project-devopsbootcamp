@@ -12,14 +12,14 @@ public class App
     public static void main( String[] args )
     {
     	System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
-    	
+    	System.out.println("Starting Test case Execution");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
     	chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-gpu");
         chromeOptions.setBinary("/usr/bin/google-chrome");
-    	
+    	System.out.println("After browset settings");
     	WebDriver webDriver = new ChromeDriver(chromeOptions);
     	System.out.println("Starting Test case Execution");
     	System.out.println("Passing Input details");
