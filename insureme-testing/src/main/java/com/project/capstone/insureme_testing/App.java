@@ -11,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-    	//System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+    	System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
     	
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
