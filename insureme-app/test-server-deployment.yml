@@ -14,6 +14,7 @@
         name: docker
         state: started
         enabled: true
+        
     - name: Deploy InsureMe App Container
       command: docker run -itd -p 8081:8081 parthasarathy89/Insureme:1.0
       state: started
