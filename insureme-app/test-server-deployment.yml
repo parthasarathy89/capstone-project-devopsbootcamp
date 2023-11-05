@@ -16,10 +16,6 @@
         enabled: true
         #command: sudo systemctl start docker
     - name: Deploy InsureMe App Container
-      docker_container:
-        name: InsureMe
-        image: parthasarathy89/insureme:1.0
-        state: started
-        ports:
-          - 8081:8081
+      command: docker run -itd -p 8081:8081 parthasarathy89/Insureme:1.0
+      state: started
         
