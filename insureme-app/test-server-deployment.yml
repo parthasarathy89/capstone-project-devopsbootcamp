@@ -19,6 +19,7 @@
       docker_container:
         name: InsureMe
         image: parthasarathy89/insureme:1.0
+        state: started
         ports:
           - 8081:8081
-        restart_policy: "unless-stopped"
+        
