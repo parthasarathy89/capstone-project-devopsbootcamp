@@ -21,7 +21,7 @@ public class App
     	System.out.println("Starting Test case Execution");
     	System.out.println("Passing Input details");
     	// Open InsureMe Contact URL
-        webDriver.get("http://54.84.146.94:8081/contact.html");
+        webDriver.get("http://54.88.130.118:8081/contact.html");
         // Pass Name
         webDriver.findElement(By.id("inputName")).sendKeys("Partha Sarathy");
         // Pass Phone Number
