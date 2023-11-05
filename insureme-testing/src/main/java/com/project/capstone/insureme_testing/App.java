@@ -37,7 +37,7 @@ public class App
         String r=webDriver.findElement(By.id("response")).getText();        
         System.out.println(r);
         // Validate webpage response
-        if (r.equals("Message Sent")) {
+        if (r.equals("Message Sen")) {
         	System.out.println("Webpage response successfully validated");
         	webDriver.close();
         	System.exit(0);	
