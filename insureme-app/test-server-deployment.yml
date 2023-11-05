@@ -1,0 +1,12 @@
+---
+- hosts: Test-server
+  become: true 
+  tasks:
+    - name: apt update
+      command: sudo apt-get update
+    - name: install docker
+      command: sudo apt install docker.io
+    - name: start docker
+      command: sudo systemctl start docker
+    - name: Deploy InsureMe App Container
+      command: docker run -itd -p 8081:8081 InsureMe parthasarathy89/insureme:1.0
