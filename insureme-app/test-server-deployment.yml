@@ -4,16 +4,19 @@
   tasks:
     - name: apt update
       command: sudo apt-get update
+    - name: install pip
+      command: sudo apt install python-pip
     - name: install docker
-      apt:
-        pkg: docker.io
-        state: present
-        #command: sudo apt install docker.io
+      command: sudo pip install docker
     - name: start docker
       service:
         name: docker
         state: started
         enabled: true
     - name: Deploy InsureMe App Container
-      command: sudo docker run -itd -p 8081:8081 parthasarathy89/Insureme:1.0
-      state: started
+      docker_container:
+        name: insureme
+        image: parthasarathy89/insureme:1.0
+        state: started
+        ports:
+          - 8081:8081
