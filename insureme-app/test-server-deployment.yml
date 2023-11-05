@@ -7,7 +7,7 @@
     - name: install docker
       apt:
         pkg: docker.io
-        sate: present
+        state: present
         #command: sudo apt install docker.io
     - name: start docker
       service:
