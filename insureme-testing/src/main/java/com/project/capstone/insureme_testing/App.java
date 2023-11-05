@@ -15,7 +15,9 @@ public class App
     	
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
-    	chromeOptions.addArguments("headless","no-sandbox");
+    	chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-gpu");
         chromeOptions.setBinary("/usr/bin/google-chrome");
     	
     	WebDriver webDriver = new ChromeDriver(chromeOptions);
