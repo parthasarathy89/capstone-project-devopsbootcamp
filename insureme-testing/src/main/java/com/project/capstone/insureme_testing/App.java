@@ -15,12 +15,9 @@ public class App
     	System.out.println("Starting Test case Execution");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
-    	chromeOptions.addArguments("headless");
+    	chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-gpu");
         chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        chromeOptions.addArguments("--verbose");
         chromeOptions.setBinary("/usr/bin/google-chrome");
     	System.out.println("After browset settings");
     	WebDriver webDriver = new ChromeDriver(chromeOptions);
