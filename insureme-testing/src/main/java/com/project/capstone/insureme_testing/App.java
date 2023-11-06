@@ -13,6 +13,7 @@ public class App
     {
     	//System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
     	System.out.println("Starting Test case Execution");
+        System.setProperty("webdriver.chrome.logfile", "/home/ubuntu/chrome.logs");
     	ChromeOptions chromeOptions = new ChromeOptions();
     	//chromeOptions.setCapability("browserVersion", "119.0.6045.105");
     	chromeOptions.addArguments("--headless");
