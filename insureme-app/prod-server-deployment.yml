@@ -1,0 +1,22 @@
+---
+- hosts: Prod-server
+  become: true 
+  tasks:
+    - name: apt update
+      command: sudo apt-get update
+    - name: install pip
+      command: sudo apt install python-pip
+    - name: install docker
+      command: sudo apt-get install python3-docker
+    - name: start docker
+      service:
+        name: docker
+        state: started
+        enabled: true
+    - name: Deploy InsureMe App Container
+      docker_container:
+        name: insureme
+        image: parthasarathy89/insureme:1.0
+        state: started
+        ports:
+          - 8081:8081
