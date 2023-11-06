@@ -4,19 +4,14 @@
   tasks:
     - name: apt update
       command: sudo apt-get update
-    - name: install pip
-      command: sudo apt install python-pip
     - name: install docker
-      command: sudo apt-get install python3-docker
-    - name: start docker
+      command: sudo apt install docker.io
+    - name: Start Docker
       service:
         name: docker
         state: started
         enabled: true
+    - name: Stop and Remove InsureMe App Container if exists and running
+      command: docker rm -f insureme || true
     - name: Deploy InsureMe App Container
-      docker_container:
-        name: insureme
-        image: parthasarathy89/insureme:1.0
-        state: started
-        ports:
-          - 8081:8081
+      command: docker run -itd -p 8081:8081 --name insureme parthasarathy89/insureme:1.0
