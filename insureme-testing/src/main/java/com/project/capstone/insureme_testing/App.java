@@ -19,6 +19,7 @@ public class App
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.setBinary("/usr/bin/google-chrome");
+        chromeOptions.addArguments("--usr-data-dir=/home/ubuntu/chrome_data.logs");
     	System.out.println("After browset settings");
     	WebDriver webDriver = new ChromeDriver(chromeOptions);
     	System.out.println("Starting Test case Execution");
